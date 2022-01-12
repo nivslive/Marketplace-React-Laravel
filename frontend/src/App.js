@@ -1,7 +1,7 @@
 import React from 'react'
-import { Button, TextField } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { red, indigo } from '@mui/material/colors';
+import Routes from './Routes.js';
 
 
 const theme = createTheme({
@@ -32,10 +32,7 @@ const App =  () => (
 
       <ThemeProvider theme={theme}>
 
-            <Button variant="contained" color="primary"> Olá Mundo</Button>
-            <TextField id="standard-basic" label="Standard" variant="standard" />
-
-
+          <Routes/>
 
       </ThemeProvider>
 
