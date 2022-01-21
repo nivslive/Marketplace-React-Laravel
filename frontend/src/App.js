@@ -6,7 +6,6 @@ import { blue } from '@mui/material/colors';
 import Router from './Routes.js';
 
 
-import { Loading } from './view/components'
 
 const theme = createTheme({
     palette: {
@@ -25,7 +24,6 @@ function App() {
         return (
             <Provider store={store}>
             <ThemeProvider theme={theme}>
-           
                     <Router/>
             </ThemeProvider>
             </Provider>
