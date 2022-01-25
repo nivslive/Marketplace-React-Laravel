@@ -1,10 +1,7 @@
 import React, { Suspense, Lazy }  from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Login from "./routes/login.js";
-import Register from "./routes/register.js";
-import Home from './routes/home.js';
-
+import {  Login, Home, Register  } from "./routes/";
 import { CircularProgress } from '@mui/material';
 
 const Router = () => (

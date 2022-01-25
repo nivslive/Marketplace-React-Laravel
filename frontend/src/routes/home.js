@@ -1,48 +1,37 @@
 import React from 'react'
 
-import { Link } from "react-router-dom";
 
-//import  Loading  from '../view/components/Loading.js'
 
-import { Loading, Notify, Alert, Confirm } from '../view/components'
+import { Loading, Notify, Alert, Confirm } from '../view/components';
+import Menu from '../view/layouts/menu/Menu';
+import {makeStyles} from '@mui/styles';
+
+
+const useStyles = makeStyles({
+  root: {
+    backgroundColor: 'black' ,
+    maxWidth: '100%'}
+})
 
 export default function App() {
+  const classes = useStyles();
   return (
-    <div style={{backgroundColor: "blue", color: "white"}}>
-    
-      <nav className="navbar navbar-dark bg-primary text-decoration-none"
-        style={{
-          borderBottom: "solid 1px",
-          paddingBottom: "1rem",
-        }}
-      >
+    <>
+    <div className={classes.root}>
+    <Confirm
+   open={false}
+   onClose={() => alert('close')}
+  onConfirm={() => alert('confirm')}
+
+   />
+    <Loading/>
+    <Notify/>
+    <Alert/>
+    <Menu/>
 
 
-    <div>
-     <h1>Bookkeeper</h1>
-     <Confirm
-     open={true}
-     onClose={() => alert('close')}
-    onConfirm={() => alert('confirm')}
-
-     />
-      <Loading/>
-      <Notify/>
-      <Alert/>
-
-     </div>
-
-
-          <div>
-        <Link to="/login">Login </Link> |{" "}
-        <Link to="/register">Register</Link>
-        </div>
-      
-
-     
-      </nav>
-
-      
     </div>
+
+    </>
   );
 }

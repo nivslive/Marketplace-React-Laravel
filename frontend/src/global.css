@@ -1,3 +1,19 @@
 * {
   outline: none !important;
 }
+
+
+
+a, a:hover {
+  text-decoration: none;
+}
+
+
+html {
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgb(7, 0, 34) 0%, rgb(1, 0, 3) 35%, rgb(0, 6, 43) 100%);
+}
+
+body {
+  background-color: none !important;
+}

@@ -34,4 +34,6 @@ export const login = credentials => dispatch => {
             open: true,
             msg: 'Autenticando usuário.'
         }))
+
+        return Http.post('')
 }
